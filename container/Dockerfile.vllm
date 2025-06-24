@@ -78,7 +78,7 @@ RUN apt-get update -y && \
     --reinstall libibverbs-dev rdma-core ibverbs-utils libibumad-dev \
     libnuma-dev librdmacm-dev ibverbs-providers
 
-ARG NIXL_UCX_REF=v1.19.x
+ARG NIXL_UCX_REF=95ebc58de1ad14ac63ca4faea6ca8705cad734a1 # current (as of 24/6) head of master branch
 
 WORKDIR /workspace
 
