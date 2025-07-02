@@ -71,9 +71,9 @@ RUN apt update -y && \
 RUN rm -rf /opt/hpcx/ucx
 RUN rm -rf /usr/local/ucx
 RUN cd /usr/local/src && \
-    git clone https://github.com/openucx/ucx.git && \
+    git clone https://github.com/tvegas1/ucx.git && \
     cd ucx &&                   \
-    git checkout v1.19.x &&     \
+    git checkout efa_trtllm_ppln &&     \
     ./autogen.sh && ./configure \
     --prefix=/usr/local/ucx     \
     --enable-shared             \
