@@ -68,6 +68,9 @@ RUN apt update -y && \
     ninja-build
 
 ### UCX EFA Setup ###
+RUN curl -O https://efa-installer.amazonaws.com/aws-efa-installer-1.41.0.tar.gz && \
+    tar -xf aws-efa-installer-1.41.0.tar.gz && cd aws-efa-installer && \
+    ./efa_installer.sh -y --skip-kmod -g --no-verify
 RUN rm -rf /opt/hpcx/ucx
 RUN rm -rf /usr/local/ucx
 RUN cd /usr/local/src && \
